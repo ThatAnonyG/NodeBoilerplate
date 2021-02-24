@@ -1,0 +1,76 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+jobs:
+  lint:
+    name: Linting
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install NodeJS
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        uses: icrawl/action-eslint@v1
+
+  typescript:
+    name: Compile typescript
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install NodeJS
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Register problem matcher
+        run: echo "##[add-matcher].github/tsc.json"
+
+      - name: Run TS compiler
+        run: npm run test:ts
+
+  jest:
+    name: Run jest tests
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install NodeJS
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Jest tests
+        run: npm run test
+
+  webpack:
+    name: Run webpack build
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install NodeJS
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Jest tests
+        run: npm run build
