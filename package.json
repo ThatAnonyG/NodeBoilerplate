@@ -1,47 +1,48 @@
 {
-	"name": "boilerplate",
-	"version": "1.0.0",
-	"description": "",
-	"main": "dist/bundle.js",
-	"jest": {
-		"roots": [
-			"<rootDir>/tests"
-		],
-		"preset": "ts-jest",
-		"testEnvironment": "node"
-	},
-	"scripts": {
-		"test": "cross-env NODE_ENV=test jest",
-		"dev": "cross-env NODE_ENV=development webpack",
-		"start": "nodemon dist/bundle.js",
-		"build": "cross-env NODE_ENV=production webpack"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/ThatAnonyG/NodeBoilerplate.git"
-	},
-	"author": "ThatAnonyG",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/ThatAnonyG/NodeBoilerplate/issues"
-	},
-	"homepage": "https://github.com/ThatAnonyG/NodeBoilerplate#readme",
-	"dependencies": {},
-	"devDependencies": {
-		"@babel/core": "^7.12.10",
-		"@babel/preset-env": "^7.12.11",
-		"@babel/preset-typescript": "^7.12.7",
-		"@typescript-eslint/eslint-plugin": "^4.13.0",
-		"@typescript-eslint/parser": "^4.13.0",
-		"cross-env": "^7.0.3",
-		"eslint": "^7.18.0",
-		"jest": "^26.6.3",
-		"nodemon": "^2.0.7",
-		"ts-jest": "^26.4.4",
-		"ts-loader": "^8.0.14",
-		"typescript": "^4.1.3",
-		"webpack": "^5.15.0",
-		"webpack-cli": "^4.3.1",
-		"webpack-node-externals": "^2.5.2"
-	}
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/bundle.js",
+  "jest": {
+    "roots": [
+      "<rootDir>/tests"
+    ],
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "test": "cross-env NODE_ENV=test jest",
+    "dev": "cross-env NODE_ENV=development webpack",
+    "format": "prettier \"src/**/*.{js,ts}\" --write",
+    "start": "nodemon dist/bundle.js",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThatAnonyG/NodeBoilerplate.git"
+  },
+  "author": "ThatAnonyG",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThatAnonyG/NodeBoilerplate/issues"
+  },
+  "homepage": "https://github.com/ThatAnonyG/NodeBoilerplate#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.7",
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.18.0",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.7",
+    "ts-jest": "^26.4.4",
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3",
+    "webpack": "^5.15.0",
+    "webpack-cli": "^4.3.1",
+    "webpack-node-externals": "^2.5.2"
+  }
 }
